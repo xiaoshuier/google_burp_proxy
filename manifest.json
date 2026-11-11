@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Burp Proxy Switcher",
+  "version": "1.0.0",
+  "description": "按域名规则快速切换 Burp Suite 代理。",
+  "permissions": ["proxy", "storage", "tabs"],
+  "action": {
+    "default_title": "Burp Proxy Switcher",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  }
+}

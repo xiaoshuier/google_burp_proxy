@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Burp Proxy 配置</title><link rel="stylesheet" href="options.css"></head>
+  <body><main class="panel"><h1>代理配置</h1><p class="desc">弹出窗口只负责快速开关和选择方案，详细配置在这里修改。</p>
+    <section><h2>已保存方案</h2><div id="profiles" class="profiles"></div></section>
+    <label>方案名称 <small>例如 burp、xxx</small></label><input id="profileId" value="burp">
+    <label>代理类型</label><select id="type"><option value="http">HTTP / Burp</option><option value="socks5">SOCKS5</option></select>
+    <label>代理地址</label><div class="row"><input id="host" value="127.0.0.1"><span>:</span><input id="port" class="port" type="number" min="1" max="65535" value="8080"></div>
+    <label>过滤直连规则 <small>每行一条</small></label><textarea id="rules" rows="7" placeholder="*google.com&#10;*.example.com"></textarea>
+    <p class="tip">命中规则的域名不经过代理，其他域名经过当前代理。</p><button id="save">保存配置</button><span id="status"></span>
+  </main><script src="options.js"></script></body>
+</html>
